@@ -14,7 +14,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://admin-zahar:Test123@cluster0.htnzu.mongodb.net/userDB");
+mongoose.connect("mongodb+srv://admin-zahar:process.env.PASSWORD@cluster0.htnzu.mongodb.net/userDB");
 
 const userSchema = new mongoose.Schema ({
     email : String,
@@ -56,7 +56,7 @@ passport.use(new GoogleStrategy({
     
     clientID:     process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/secrets",
+    callbackURL: "https://rocky-cliffs-99277.herokuapp.com/auth/google/secrets",
     passReqToCallback   : true,
   },
   function(request, accessToken, refreshToken, profile, done) {
