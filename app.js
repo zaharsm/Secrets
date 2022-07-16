@@ -14,7 +14,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://admin-zahar:process.env.PASSWORD@cluster0.htnzu.mongodb.net/userDB");
+mongoose.connect("mongodb+srv://admin-zahar:Test123@cluster0.htnzu.mongodb.net/userDB");
 
 const userSchema = new mongoose.Schema ({
     email : String,
